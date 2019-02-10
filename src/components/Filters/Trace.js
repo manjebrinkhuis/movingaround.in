@@ -51,9 +51,9 @@ class Trace extends Component {
   }
 
   render() {
-    const { 
-      topLeft, bottomRight, attribution, 
+    const { attribution, topLeft, bottomRight,
       url, width, height, trace } = this.props.trace;
+
     const [latL, lonL] = topLeft;
     const [latR, lonR] = bottomRight;
     const bounds = L.latLngBounds(L.latLng(latL, lonL), L.latLng(latR, lonR));

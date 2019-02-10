@@ -1,5 +1,6 @@
 #comments-container {
-    border-top: .25em solid #f0f0f0;
+    border-top: .5em solid #f8f8f8;
+    margin: 1em;
     font-family: 'Libre Baskerville', serif;
 }
 
@@ -10,18 +11,19 @@
     max-width: 40em;
 }
 
-
 #comments-header-container h2 {
     font-family: 'Major Mono Display', monospace;
-    font-size: 2em;
+    font-size: 2rem;
+    line-height: 1em;
     color: #456;
-    margin: 3rem 0;
+    margin-bottom: 1rem;
 }
 
 #comments-header-container p {
     color: #456;
     font-family: 'Libre Baskerville', serif;
-    margin: 2em 0;
+    text-align: justify;
+    line-height: 1.5em;
 }
 
 .comment-container {
@@ -98,7 +100,7 @@
     border: 0;
     border-radius: 1em;
     padding: 1em;
-    margin-bottom: .25em;
+    margin-bottom: .5em;
     box-sizing: border-box;   
 }
 
@@ -117,7 +119,7 @@
     justify-content: center;
     padding: 0;
     max-width: 40em;
-    margin: 0 auto;
+    margin: 2em auto;
 }
 
 #main-comment-form .input {
@@ -161,8 +163,8 @@
     display: block;
     margin: 1em auto;
     border: 0;
-    border-radius: .25em;
-    padding: .5em .75em;
+    border-radius: 1em;
+    padding: 1em;
     color: #345;
     font-weight: bold;
     font-size: 1em;

@@ -4,7 +4,6 @@ import { withRouter } from "react-router-dom";
 import Comments from "../Comments/Comments";
 import { getAndSetPost, clearPost } from "../../redux/actions";
 
-
 class Post extends Component {
 
     componentDidMount() {
@@ -18,7 +17,7 @@ class Post extends Component {
     showTiles() {
         // Switch to tiles
         this.props.clearPost();
-        this.props.history.push("/")
+        this.props.history.push("/");
     }
 
     render() {

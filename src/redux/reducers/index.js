@@ -25,8 +25,7 @@ function archive( state = {
 const html = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
 
 function trace( state = {
-    url: `http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg`,
-    // url: `http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`,
+    url: `https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg`,
     width: "100%",
     height: 500,
     attribution: html,
@@ -64,7 +63,7 @@ function blog( state = {
     commentsPage: 1,
     commentsPerPage: 6,
     post: null,
-    perPage: 2,
+    perPage: 10,
     page: 1,
 }, action) {
     switch( action.type ){

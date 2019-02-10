@@ -24,6 +24,7 @@ class Main extends Component {
 
     componentDidMount() {
         this.props.setPosts( 1, this.props.blog.perPage );
+        document.title = "Moving around the World!"
     }
 
     createPost() {
