@@ -4,7 +4,7 @@ import Post from "./Body/Post";
 import Tiles from "./Body/Tiles";
 import Trace from "./Filters/Trace";
 import Filters from "./Filters/Filters";
-
+import { Helmet } from "react-helmet";
 import { setPosts, appendPosts } from "../redux/actions";
 import { Route, withRouter } from "react-router-dom";
 
@@ -24,7 +24,6 @@ class Main extends Component {
 
     componentDidMount() {
         this.props.setPosts( 1, this.props.blog.perPage );
-        document.title = "Moving around the World!"
     }
 
     createPost() {
@@ -49,6 +48,12 @@ class Main extends Component {
     render() {
         return (
             <div>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Moving around the world</title>
+                    <meta name="description" content="Travelling the globe, documenting its natural beauty in text and in image." />                           
+                    <meta name="keywords" content="South America, South East Asia, Argentina, Chile, Bolivia, Peru, Equador, Maleisia, Vietnam, Thailand, Cambodia, Singapore, Laos, World, Travel" />                           
+                </Helmet>
                 <div id="navigation-container">
                     <Trace />
                     <Filters />
