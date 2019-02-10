@@ -1,0 +1,15 @@
+* {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+html, body {
+  margin: 0;
+  background: #345;
+}
+
+:focus {outline:none;}
+
+button {
+  cursor: pointer;
+}

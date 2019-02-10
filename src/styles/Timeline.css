@@ -1,0 +1,32 @@
+#timeline-container {
+    margin: 0 auto;    
+    width: 100%;
+}
+
+#timeline {
+    margin-bottom: .25em;
+    width: 100%;
+}
+
+.timeline-left {
+    display: inline-block;
+    width: 50%;
+}
+
+.timeline-left p {
+    color: #678;
+    font-weight: bold;
+    margin: .25em;
+}
+
+.timeline-right {
+    display: inline-block;
+    width: 50%;
+}
+
+.timeline-right p {
+    color: #678;
+    font-weight: bold;
+    text-align: right;
+    margin: .25em;
+}

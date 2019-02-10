@@ -1,0 +1,32 @@
+#filters-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+    border-radius: .25em;
+    background: #fff;
+    padding: 1em;
+    max-width: 24em;
+}
+
+.filters-apply {
+    width: 100%;
+}
+
+.filters-apply button {
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    border-radius: .5em;
+    background: #678;
+    color: #fff;
+    padding: .5em .75em;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 960px) {
+    #filters-container {
+        max-width: 100% !important;
+    }
+}

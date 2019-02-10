@@ -1,0 +1,175 @@
+#comments-container {
+    border-top: .25em solid #f0f0f0;
+    font-family: 'Libre Baskerville', serif;
+}
+
+#comments-header-container {
+    margin: 0 auto;
+    line-height: 1.5em;
+    border-radius: .25em;
+    max-width: 40em;
+}
+
+
+#comments-header-container h2 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 2em;
+    color: #456;
+    margin: 3rem 0;
+}
+
+#comments-header-container p {
+    color: #456;
+    font-family: 'Libre Baskerville', serif;
+    margin: 2em 0;
+}
+
+.comment-container {
+    margin: 0 auto;
+    margin-bottom: .25em;
+    line-height: 1.5em;
+    max-width: 40em;
+    background: #fafafa;
+    padding: 1em;
+    border-radius: .25em;
+}
+
+.comment-content {
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.odd {
+    background: rgba(0,0,0,0.01);
+    color: #456;
+}
+
+.even {
+    background: rgba(0,0,0,0.02);
+    color: #345;
+}
+
+.reply {
+    margin-left: 1em;
+}
+
+.reply-button {
+    padding: 0;
+    background: none;
+    color: #345;
+    font-weight:bold;
+    border: 0;
+    margin-bottom: 1rem;
+    font-size: .75rem;
+}
+
+.reply-reply-button {
+    padding: 0;
+    background: none;
+    color: #345;
+    font-weight:bold;
+    border: 0;
+    font-size: .75rem;
+}
+
+.comment-container span {
+    margin-left: .5rem;
+    font-size: .75rem;
+}
+
+.comment-container span b {
+    font-size: .75rem;
+} 
+
+.comment-container p {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-form .input, .comment-form .text {
+    width: 100%;
+    background: #fff;
+    border: 0;
+    border-radius: 1em;
+    padding: 1em;
+    margin-bottom: .25em;
+    box-sizing: border-box;   
+}
+
+.comment-form .submit {
+    background: #456;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 1em;
+    padding: 1em;
+    border: 0;
+}
+
+#main-comment-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+#main-comment-form .input {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: .5em;
+    background: #fafafa;
+    color: #222; 
+    border-radius: 1em;
+    padding: 1em;
+    border: 0;
+}
+
+#main-comment-form .text {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: .25em;
+    border: 0;
+    background: #fafafa;
+    color: #222; 
+    border-radius: 1em;
+    padding: 1em;
+}
+
+#main-comment-form .submit {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: .5em;
+    background: #456;
+    color: #fff; 
+    border-radius: 1em;
+    padding: 1em;
+    border: 0;
+    font-weight: bold;
+}
+
+#comments-load-more {
+    display: block;
+    margin: 1em auto;
+    border: 0;
+    border-radius: .25em;
+    padding: .5em .75em;
+    color: #345;
+    font-weight: bold;
+    font-size: 1em;
+    background: #fafafa;
+}
+
+#comments-load-more:hover {
+    background: #678;
+    color: #fff;
+}

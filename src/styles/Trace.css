@@ -1,0 +1,23 @@
+#trace {
+    border: 1px solid #000;
+}
+
+#leaflet-container {
+    margin: 0;
+    width: 32em;
+    margin-right: 1em;
+    border-radius: .25em;
+    overflow: hidden;
+}
+
+.leaflet-container a {
+    font-size: 11px;
+}
+
+@media only screen and (max-width: 960px) {
+    #leaflet-container {
+        margin: 0 !important;
+        margin-bottom: 1em !important;
+        width: 100% !important;
+    }
+}

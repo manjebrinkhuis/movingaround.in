@@ -1,0 +1,25 @@
+#categories-container {
+    margin: .25em auto;
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.active-category-button, .category-button {
+    border: 3px solid #567;
+    margin-right: .25em;
+    margin-bottom: .25em;
+    padding: .25em .5em;
+    border-radius: .25em;
+    font-weight: bold;
+}
+
+.category-button {
+    background: #fff;
+    color: #567;
+}
+
+.active-category-button {
+    background: #567;
+    color: #fff;
+}

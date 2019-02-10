@@ -1,0 +1,230 @@
+#navigation-container {
+    padding: 1em;
+    background: #2a2f40;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#posts-container-outer {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+    background: #fff;
+    border-top-left-radius: .25em;
+    border-top-right-radius: .25em;
+}
+
+#posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em auto;
+    padding-bottom: 1em;
+}
+
+#posts-load-more {
+    width: 100%;
+    padding-bottom: 1em;
+    background: #fff;
+}
+
+#posts-load-more button {
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    border-radius: .25em;
+    padding: .5em .75em;
+    color: #445566;
+    font-weight: bold;
+    font-size: 1.5em;
+    background: #fff;
+}
+
+#posts-load-more button:hover {
+    background: #678;
+    color: #fff;
+}
+
+#posts-load-more button:active {
+    background: #789;
+    color: #fff;
+}
+
+.tile-container {
+    /* display: block; */
+    margin: 0;
+    width: 33.3%;
+}
+
+.tile-box {
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: .25em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid rgba(255,255,255,.5);
+    border-right: 1px solid rgba(0,0,0,.1);
+    border-bottom: 2px solid rgba(0,0,0,.1);
+    border-left: 1px solid rgba(255,255,255,.5);
+    z-index: -999;
+}
+
+.tile {
+    position: relative;
+    margin: 0 .5em;
+    margin-top: 1em;
+    border-radius: .25em;
+    overflow: hidden;
+    color: #444;
+    font-weight: bold;
+}
+
+.tile-header {
+    height: 12em;
+    color: #fff;
+    padding: 1em;
+    background-size: cover;
+    background-position: center center;
+}
+
+.tile-container h1 {
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.tile-container h2 {
+    font-size: 1em;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.tile-content p {
+    margin: 0;
+    padding: 1em;
+    margin-bottom: 1rem;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 2rem;
+    font-stretch: expanded;
+}
+
+.tile-content button {
+    border: 0;
+    border-bottom-left-radius: .25em;
+    border-bottom-right-radius: .25em;
+    line-height: 5rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tile-content button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #222
+}
+
+.tile-content button:active {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.post-container {
+    max-width: 56em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: rows;
+}
+
+.post-left-block {
+    flex-grow: 1;
+    text-align: right;
+    padding: 1em;
+}
+
+.post-right-block {
+    flex-grow: 2;
+    padding: 1em;
+}
+
+.post-left-block h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #657;
+}
+
+.post-left-block h2 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1em;
+    margin: 0;
+    margin-top: 1em;
+    padding: 0;
+    font-weight: bold;
+    color: #657;
+}
+
+.post-left-block button {
+    margin-top: 1em;
+    border: 0;
+    border-radius: .25em;
+    padding: .5em .75em;
+    color: #fff;
+    font-weight: bold;
+    background: #657;
+}
+
+.post-right-block p {
+    font-size: 1em;
+    margin: 0;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+    color: #222;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.wp-block-gallery {
+    width: 100%;
+    margin-top: 1em;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.blocks-gallery-item {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.blocks-gallery-item figure, .post-right-block figure {
+    margin: 0;
+    width: 100%; 
+}
+
+.blocks-gallery-item img, .post-right-block img {
+    margin: 0;
+    width: 100%; 
+    border-radius: .25em;
+}
+
+@media only screen and (max-width: 960px) {
+    #posts-container {
+        width: 100% !important;
+        flex-direction: column !important; 
+    }
+
+    .tile-container {
+        width: 100% !important;
+    };
+}
