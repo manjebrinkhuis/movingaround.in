@@ -29,7 +29,8 @@ class Post extends Component {
                     <div className="post-container">
                         <div className="post-left-block">
                             <h1 dangerouslySetInnerHTML={{__html: post.title.rendered}}></h1>
-                            <h2>{post.acf.date}</h2>
+                            <h2>on <b>{post.acf.date}</b></h2>
+                            <h2>by <b>{post._embedded.author[0].slug}</b></h2>
                             <button onClick={this.showTiles.bind(this)}>Back</button>
                         </div>
                         <div className="post-right-block" dangerouslySetInnerHTML={{__html: post.content.rendered}} />

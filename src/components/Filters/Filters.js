@@ -36,10 +36,12 @@ class Filters extends Component {
     render() {
         return(
             <div id="filters-container">
-                <Categories />
-                <Timeline />
-                <div className="filters-apply">
-                    {this.showButton()}
+                <div id="filters-padding">
+                    <Categories />
+                    <Timeline />
+                    <div className="filters-apply">
+                        {this.showButton()}
+                    </div>
                 </div>
             </div>
         )

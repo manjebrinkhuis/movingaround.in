@@ -1,12 +1,12 @@
 #comments-container {
     border-top: .5em solid #f8f8f8;
     margin: 1em;
-    font-family: 'Libre Baskerville', serif;
-}
+    /* font-family: 'Libre Baskerville', serif; */
+    font-family: sans-serif;}
 
 #comments-header-container {
     margin: 0 auto;
-    line-height: 1.5em;
+    line-height: 1.8em;
     border-radius: .25em;
     max-width: 40em;
 }
@@ -14,16 +14,16 @@
 #comments-header-container h2 {
     font-family: 'Major Mono Display', monospace;
     font-size: 2rem;
-    line-height: 1em;
+    line-height: 2em;
     color: #456;
     margin-bottom: 1rem;
 }
 
 #comments-header-container p {
     color: #456;
-    font-family: 'Libre Baskerville', serif;
-    text-align: justify;
-    line-height: 1.5em;
+    /* font-family: 'Libre Baskerville', serif; */
+    font-family: sans-serif;    text-align: justify;
+    line-height: 1.8em;
 }
 
 .comment-container {
@@ -72,6 +72,10 @@
     font-weight:bold;
     border: 0;
     font-size: .75rem;
+}
+
+.reply-button:hover, .reply-reply-button:hover {
+    color: #567;
 }
 
 .comment-container span {
@@ -150,7 +154,7 @@
     box-sizing: border-box;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: .5em;
+    margin: .25em 0;
     background: #456;
     color: #fff; 
     border-radius: 1em;

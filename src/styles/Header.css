@@ -11,14 +11,23 @@
     display: inline-block;
     font-weight: normal;
     font-size: 3em;
-    color: #fff;
     font-family: 'Major Mono Display', monospace;
+    color: #fff;
 }
 
 #header-container p {
+    margin: 0 auto;
     display: inline-block;
-    font-weight: normal;
+    line-height: 1.9em;
+    font-weight: 400;
     font-size: 1em;
-    color: #fff;
-    font-family: 'Major Mono Display', monospace;
+    color: #e0e0ef;
+    font-family: 'sans serif';
+    max-width: 50%;
+}
+
+@media only screen and (max-width: 720px) {
+    #header-container p {
+        max-width: 100% !important;
+    }
 }

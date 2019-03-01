@@ -44,7 +44,7 @@ class CommentForm extends Component {
     }
 
     validateInput() {
-        return (!this.state.email) || (!this.state.name) || (!this.state.message)
+        return ((!this.state.name) || (!this.state.message))
     }
 
     handleChange(e){
@@ -57,10 +57,10 @@ class CommentForm extends Component {
         return (
             <form className={this.props.className} id={this.props.id} onSubmit={this.handleSubmit.bind(this)}>
                 <input className="input" name="name" type="text" placeholder="name" onChange={this.handleChange.bind(this)} />
-                <input className="input" name="email" type="text" placeholder="email" onChange={this.handleChange.bind(this)} />
+                <input className="input" name="email" type="text" placeholder="email (optional)" onChange={this.handleChange.bind(this)} />
                 <textarea className="text" name="message" placeholder="your message" onChange={this.handleChange.bind(this)} />
                 <input disabled={this.validateInput()} className="submit" type="submit" value={
-                    this.validateInput() ? "Please fill out all fields" : "Send"
+                    this.validateInput() ? "Please fill out a name and message" : "Send"
                 } />
             </form>
         )
