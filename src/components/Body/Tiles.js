@@ -2,13 +2,21 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import Tile from "./Tile";
-import { appendPosts } from "../../redux/actions";
+import { setPosts } from "../../redux/actions";
 import { filterPosts } from "../../utils/helpers";
 
 class Tiles extends Component {
 
     updatePosts( postIDs ) {
         this.props.appendPosts( this.props.blog.page + 1, this.props.blog.perPage, postIDs );
+    }
+
+    showLoading() {
+        if ( this.props.blog.isFetching ) {
+            return (
+                <div id="posts-loading">Loading...</div>
+            )
+        }
     }
 
     showMore() {
@@ -18,7 +26,7 @@ class Tiles extends Component {
 
         const postIDs = filterPosts(trace, categories, [dateFrom, dateTo]).map(point => point.id); 
 
-        if ( postIDs.length > postsShown ) {
+        if ( !this.props.blog.isFetching && ( postIDs.length > postsShown )) {
             return (
                 <div id="posts-load-more">
                     <button onClick={() => this.updatePosts( postIDs )}>Show more</button>
@@ -42,6 +50,7 @@ class Tiles extends Component {
                         )
                     })}
                 </div>
+                {this.showLoading()}
                 {this.showMore()}
             </div>
         )
@@ -58,7 +67,7 @@ function mapStateToProps( state ) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        appendPosts: (page, perPage, postIDs) => dispatch(appendPosts(page, perPage, postIDs)),
+        appendPosts: (page, perPage, postIDs) => dispatch(setPosts(page, perPage, postIDs, true)),
     }
 }
 

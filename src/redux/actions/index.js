@@ -1,7 +1,7 @@
 const URL = "https://wp.movingaround.in/wp-json";
 
 
-export function request( endpoint, type, args ) {
+export function request( endpoint, type, args, after=null ) {
     return dispatch => {
         const argString = args ? "?" + Object.keys(args).map( key => key +"="+ args[key]).join("&") : "";
         const url = URL + endpoint + argString;
@@ -12,6 +12,9 @@ export function request( endpoint, type, args ) {
                         type,
                         response
                     })
+                    if ( after !== null ) {
+                        dispatch( after )
+                    }
                 })
             } else {
                 return Promise.reject( "No ok response." )
@@ -74,20 +77,27 @@ export function clearPost() {
 }
 
 
-export function setPosts( page, perPage, postIDs ) {
-    if ( postIDs ) {
-        return request( "/wp/v2/posts", "SET_POSTS", { 
-            include: postIDs.join(","),
-            per_page: perPage,
-            page,
-            _embed: ""
-        })
-    } else {
-        return request( "/wp/v2/posts", "SET_POSTS", {
-            per_page: perPage,
-            page,
-            _embed: ""
-        })
+export function setPosts( page, perPage, postIDs, append=false ) {
+    return dispatch => {
+        dispatch({ type: "REQUEST" })
+        if ( postIDs ) {
+            dispatch(request( "/wp/v2/posts", append ? "APPEND_POSTS" : "SET_POSTS", { 
+                include: postIDs.join(","),
+                per_page: perPage,
+                page,
+                _embed: ""
+            }, {
+                type: "REQUEST_SUCCESS"
+            }))
+        } else {
+            dispatch(request( "/wp/v2/posts", append ? "APPEND_POSTS" : "SET_POSTS", {
+                per_page: perPage,
+                page,
+                _embed: ""
+            }, {
+                type: "REQUEST_SUCCESS"
+            }))
+        }
     }
 }
 

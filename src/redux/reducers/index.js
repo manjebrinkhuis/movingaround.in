@@ -54,6 +54,7 @@ function trace( state = {
 }
 
 function blog( state = {
+    isFetching: false,
     posts: [],
     categories: [],
     footer: [],
@@ -63,10 +64,14 @@ function blog( state = {
     commentsPage: 1,
     commentsPerPage: 6,
     post: null,
-    perPage: 10,
+    perPage: 6,
     page: 1,
 }, action) {
     switch( action.type ){
+        case "REQUEST":
+            return { ...state, isFetching: true }
+        case "REQUEST_SUCCESS":
+            return { ...state, isFetching: false }
         case "SET_POSTS":
             return { ...state, posts: action.response, page: 1 }
         case "SET_POST":

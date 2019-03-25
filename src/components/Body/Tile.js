@@ -31,7 +31,8 @@ class Tile extends Component {
                 <div className="tile" style={{
                     backgroundColor: "hsl(" + a + ", 40%, 90%)" 
                 }}>
-                    <div className="tile-header" style={{ backgroundImage: "url("+imgUrl+")" }}>
+                    <div className="tile-image" style={{ backgroundImage: "url("+imgUrl+")" }}></div>
+                    <div className="tile-header">
                         <h1 dangerouslySetInnerHTML={{__html: this.props.title.rendered}}></h1>
                         <h2>{formatDate( date )}</h2>
                     </div>

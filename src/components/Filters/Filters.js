@@ -25,7 +25,7 @@ class Filters extends Component {
             return (
                 <button 
                     onClick={() => this.applyFilter( postIDs )}>
-                    {true ? "Apply filters" : "Loading..." }
+                    {true ? "Load "+postIDs.length+" posts" : "Loading..." }
                 </button>
             )
         } else {
