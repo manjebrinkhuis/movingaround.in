@@ -28,7 +28,7 @@ export function request( endpoint, type, args, after=null ) {
 
 
 export function loadTrace() {
-    const fields = "_fields[]=id&_fields[]=acf&_fields[]=slug&_fields[]=categories";
+    const fields = "_fields[]=id&_fields[]=acf&_fields[]=slug&_fields[]=categories&per_page=100";
     return request( "/wp/v2/posts?"+fields, "LOAD_TRACE" )
 }
 

@@ -64,7 +64,7 @@ function blog( state = {
     commentsPage: 1,
     commentsPerPage: 6,
     post: null,
-    perPage: 6,
+    perPage: 9,
     page: 1,
 }, action) {
     switch( action.type ){
