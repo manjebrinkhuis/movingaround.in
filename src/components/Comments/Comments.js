@@ -21,7 +21,6 @@ class Comments extends Component {
         const { comments, post, commentsPerPage } = this.props.blog;
         const filtered = comments.filter( comment => (comment.post === post.id)  && (comment.parent === 0))
         const commentsPage = Math.ceil(filtered.length / commentsPerPage) + 1;
-        console.log( commentsPage, commentsPerPage, post.id );
         this.props.setComments(commentsPage, commentsPerPage, post.id)
     }
 

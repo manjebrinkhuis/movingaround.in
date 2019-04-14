@@ -119,7 +119,7 @@ export function appendPosts( page, perPage, postIDs ) {
 }
 
 export function setCategories() {
-    return request( "/wp/v2/categories", "SET_CATEGORIES" )
+    return request( "/wp/v2/categories?per_page=100", "SET_CATEGORIES" )
 }
 
 function wpRequest( endpoint, options ) {

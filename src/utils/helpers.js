@@ -69,3 +69,8 @@ export function cartesianToPolar( x, y, shift=0 ) {
         a: Math.atan( y/x ) * (360 / Math.PI * 2)
     }
 }
+
+export function round( val, precision ) {
+    const p = Math.pow( 10, precision );
+    return Math.round( val * p ) / p
+}

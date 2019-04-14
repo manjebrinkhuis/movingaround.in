@@ -16,6 +16,9 @@ class Tile extends Component {
 
         this.props.getAndSetPost({ slug }, posts);
         this.props.history.push( url );
+
+        // When opening a post, scroll to the title
+        document.getElementById("posts-container-outer").scrollIntoView();
     }
 
     render() {

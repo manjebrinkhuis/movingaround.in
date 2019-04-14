@@ -22,6 +22,9 @@ class Trace extends Component {
 
     this.props.getAndSetPost({ slug }, posts);
     this.props.history.push(url);
+
+    // Scroll to post title
+    document.getElementById("posts-container-outer").scrollIntoView();
   }
 
   createPoints( sorted ) {
@@ -31,7 +34,6 @@ class Trace extends Component {
       const { address, lat, lng } = point.acf.coordinates;
       const { date } = point.acf;
       const { slug, categories } = point;
-
       const position = [ parseFloat(lat), parseFloat(lng) ];
 
       return (

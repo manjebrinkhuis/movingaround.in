@@ -8,7 +8,7 @@ class CommentReplies extends Component {
         const { comments, post } = this.props.blog;
         const filtered = comments.filter(comment => comment.post === post.id)
         return (
-            filtered.filter(comment => comment.parent === this.props.parent).map((comment, index) => {
+            filtered.reverse().filter(comment => comment.parent === this.props.parent).map((comment, index) => {
                 return (
                     <CommentReply 
                         key={index} 
